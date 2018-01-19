@@ -6,7 +6,8 @@ var catalina = {
 	ciudad: 'freire',
 	ocupacion: 'estudiante de ciencia política',
 	foto: 'img/fotoperfil.jpg',
-
+	
+	
 	crearTarjeta: function() {
 		var body = document.getElementById('body');
 		var tarjeta = document.createElement('div');
@@ -30,7 +31,24 @@ var catalina = {
 		apellido.setAttribute('class', 'texto');
 		tarjeta.appendChild(apellido);
 
-		
+		var correo = document.createElement('p');
+		var textCorreo = document.createTextNode('coreo:' + this.correo);
+		correo.appendChild(textCorreo);
+		correo.setAttribute('class', 'texto');
+		tarjeta.appendChild(correo);
+
+		var ciudad = document.createElement('p');
+		var textCiudad = document.createTextNode('ciudad:' + this.ciudad);
+		ciudad.appendChild(textCiudad);
+		ciudad.setAttribute('class', 'texto');
+		tarjeta.appendChild(ciudad);
+
+		var ocupacion = document.createElement('p');
+		var textOcupacion = document.createTextNode('ocupacion:' + this.ocupacion);
+		ocupacion.appendChild(textOcupacion);
+		ocupacion.setAttribute('class', 'texto');
+		tarjeta.appendChild(ocupacion);
+
 
 	}
 
